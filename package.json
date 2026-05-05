@@ -2,21 +2,16 @@
   "name": "jest-unit-testing",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/thgeng/jest-unit-testing#readme",
-  "bugs": {
-    "url": "https://github.com/thgeng/jest-unit-testing/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thgeng/jest-unit-testing.git"
-  },
-  "license": "ISC",
-  "author": "thomas",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "module.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
+  "jest": {
+    "transform": {}
+  },
+  "author": "thomas",
+  "license": "ISC",
   "dependencies": {
     "cross-env": "^10.1.0",
     "jest": "^30.3.0"
